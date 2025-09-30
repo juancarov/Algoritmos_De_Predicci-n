@@ -202,3 +202,38 @@ B -> ε</pre>
 
 *Salida*
 
+![Salida1](gramatica1.png)
+
+*Gramática 1 de ejemplo*
+
+<pre>S -> C
+C -> if ( E ) C else C
+C -> while ( E ) C
+C -> { L }
+C -> id = E ;
+L -> C L
+L -> ε
+E -> E + T
+E -> T
+T -> T * F
+T -> F
+F -> ( E )
+F -> id
+F -> num</pre>
+
+*Salida*
+
+![Salida2](gramatica2.png)
+
+### Conclusión
+
+Este proyecto muestra la relación entre los conjuntos PRIMEROS, SIGUIENTES y la tabla de predicción en el contexto de los analizadores sintácticos predictivos LL(1).
+Con estos cálculos:
+
+PRIMEROS indican cómo pueden empezar las derivaciones.
+
+SIGUIENTES definen el contexto en que aparecen los no terminales.
+
+Predicción combina ambos para decidir de forma determinista qué producción aplicar.
+
+Esto sienta las bases para la construcción de un parser LL(1) eficiente y automático.
